@@ -16,7 +16,7 @@ phases:
   post_build:
     commands:
       - echo "Upload deployment.zip to S3..."
-      - aws s3 cp deployment.zip s3://codepipeline-us-east-1-848523133671/deployment.zip
+      - aws s3 cp deployment.zip s3://lambda-test-23890/deployment.zip
       - echo "Build DONE!!"
 
 artifacts:
