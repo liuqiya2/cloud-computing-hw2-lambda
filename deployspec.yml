@@ -10,15 +10,15 @@ phases:
       - ls -al
       #- echo "Listing BuildOutput directory"
       #- ls -al BuildOutput/
-      - echo "Creating deployment directory"
-      - mkdir -p deployment  # Creates the directory if it doesn't exist
-      - echo "Unzipping deployment.zip"
-      - unzip deployment.zip -d deployment/
+      #- echo "Creating deployment directory"
+      #- mkdir -p deployment  # Creates the directory if it doesn't exist
+      #- echo "Unzipping deployment.zip"
+      #- unzip deployment.zip -d deployment/
 
   build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name search-photos --zip-file fileb://deployment/deployment.zip
+      - aws lambda update-function-code --function-name search-photos --zip-file fileb:///deployment.zip
       - echo "Deploy DONE!!"
 
 artifacts:
