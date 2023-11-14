@@ -4,6 +4,13 @@ phases:
     runtime-versions:
       python: 3.9
 
+  pre_build:
+    commands:
+      - echo "Creating deployment directory"
+      - mkdir -p deployment  # Creates the directory if it doesn't exist
+      - echo "Unzipping deployment.zip"
+      - unzip BuildOutput/deployment.zip -d deployment/
+
   build:
     commands:
       - echo "Updating lambda Function..."
