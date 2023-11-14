@@ -12,7 +12,7 @@ phases:
       - cd package
       - zip -r ../deployment.zip .
       - cd ..
-      - zip deployment.zip search_photos.py
+      - zip deployment.zip lambda_function.py
   post_build:
     commands:
       - echo "Uploading deployment.zip to S3..."
