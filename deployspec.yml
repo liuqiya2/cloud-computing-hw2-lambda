@@ -7,7 +7,6 @@ phases:
   build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name search-photos --s3-bucket lambda-test-23890 --s3-key deployment.zip
       - echo "Deploy DONE!!"
 
 artifacts:
