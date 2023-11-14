@@ -2,12 +2,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.11
+      python: 3.9
 
   build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name search-photos --s3-bucket codepipeline-us-east-1-848523133671 --s3-key deployment.zip
+      - aws lambda update-function-code --function-name search-photos --zip-file fileb://deployment.zip
       - echo "Deploy DONE!!"
 
 artifacts:
