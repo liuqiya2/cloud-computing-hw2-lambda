@@ -13,11 +13,6 @@ phases:
       - zip -r ../deployment.zip .
       - cd ..
       - zip deployment.zip lambda_function.py
-  post_build:
-    commands:
-      - echo "Uploading deployment.zip to S3..."
-      #- aws lambda update-function-code --function-name search-photos --zip-file fileb://deployment.zip
-      - echo "Upload DONE!!"
 
 artifacts:
   files:
