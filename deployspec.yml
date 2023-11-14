@@ -6,6 +6,10 @@ phases:
 
   pre_build:
     commands:
+      - echo "Listing current directory"
+      - ls -al
+      - echo "Listing BuildOutput directory"
+      - ls -al BuildOutput/
       - echo "Creating deployment directory"
       - mkdir -p deployment  # Creates the directory if it doesn't exist
       - echo "Unzipping deployment.zip"
