@@ -13,6 +13,7 @@ phases:
       - zip -r ../deployment.zip .
       - cd ..
       - zip deployment.zip search_photos.py
+      - zip deployment.zip deployspec.yml
   post_build:
     commands:
       - echo "Uploading deployment.zip to S3..."
