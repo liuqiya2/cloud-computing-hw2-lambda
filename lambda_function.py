@@ -13,7 +13,7 @@ client = boto3.client('lexv2-runtime')
 s3 = boto3.client('s3')
 
 def lambda_handler(event, context):
-    
+    print("change in demo")
     print(f"Event here:{event}")
     msg_from_user = event['queryStringParameters']['q']
     print(f"Message from frontend: {msg_from_user}")
